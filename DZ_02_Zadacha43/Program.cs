@@ -20,9 +20,11 @@ void IntersectionPoint (int k1, int b1, int k2, int b2)
         } 
         else 
         {   
-            double x = (b2 - b1)/ (k1 - k2);
-            double y = k2 * x + b2;
-            Console.Write($"Точкой пересечения двух линий является ({x},{y})");
+            double b = b2 - b1;
+            double k = k1 - k2;
+            double x = Math.Round(b/k,2);
+            double y = (k2 * x + b2);
+            Console.Write($"Точкой пересечения двух линий является ({x};{y})");
         }
     }
 }
